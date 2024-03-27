@@ -1,6 +1,14 @@
 public class ArrayOfArrays {
   public static void main (String[] args) {
-    pascalSquare(5);
+    // pascalSquare(5);
+     
+    int[][] arr = {{2, 1, 0}, {1, 3, 2}, {0, 0, 0}, {4, 5, 6}};
+    int[][] copy = copyArray(arr);
+    
+    arr[3][1] = -22;
+
+    System.out.println("arr[3][1] = " + arr[3][1]);
+    System.out.println("copy[3][1] = " + copy[3][1]);
   }
 
   public static void pascalSquare (int size) {
@@ -37,6 +45,18 @@ public class ArrayOfArrays {
         rowAbove[k] = currentRow[k];
       }
     }
+  }
+
+  public static int[][] copyArray (int[][] arr) {
+    int[][] result = new int[arr.length][arr[0].length];
+
+    for (int r = 0; r < arr.length; r++) {
+      for (int c = 0; c < arr[0].length; c++) {
+        result[r][c] = arr[r][c];
+      }
+    }
+    
+    return result;
   }
 
   public static void example4 () {
