@@ -4,7 +4,10 @@ public class ArrayOfArrays {
      
     int[][] arr = {{2, 1, 0}, {1, 3, 2}, {0, 0, 0}, {4, 5, 6}};
     int[][] copy = copyArray(arr);
-    
+
+    System.out.println("arr[3][1] = " + arr[3][1]);
+    System.out.println("copy[3][1] = " + copy[3][1]);
+
     arr[3][1] = -22;
 
     System.out.println("arr[3][1] = " + arr[3][1]);
